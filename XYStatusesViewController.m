@@ -22,7 +22,6 @@
 {
     if (_status == nil) {
         
-        
         NSString *path = [[NSBundle mainBundle] pathForResource:@"statuses.plist" ofType:nil];
         NSArray *array = [NSArray arrayWithContentsOfFile:path];
         
@@ -66,19 +65,12 @@
  */
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-//    实际上这边取到的cell为nil。  通过取cell的方法不能用
-//    XYStatusCell *cell = (XYStatusCell *)[tableView cellForRowAtIndexPath:indexPath];
-//    return cell.height;
 
-    
     NSLog(@"-----heightForRowAtIndexPath------");
-    
     XYStatus *status = self.status[indexPath.row];
     return status.cellHeight;
     
 }
-
 
 
 /**
