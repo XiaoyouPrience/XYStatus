@@ -92,6 +92,7 @@
         _height = CGRectGetMaxY(self.pictureView.frame) + 10;
     }
     
+    // 在status中保存对应的cell高度
     status.cellHeight = _height;
     
 }
